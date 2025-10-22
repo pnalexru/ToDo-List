@@ -1,4 +1,3 @@
-import { Header } from "../components/Header/Header"
 import { Form } from "../components/Form/Form"
 import { ToDoList } from "../components/ToDoList/ToDoList"
 import { ToDo } from "../models/todo-item"
@@ -28,14 +27,13 @@ export const ToDoListPage = () => {
   }
 
   const deleteToDo = (toDoItem: ToDo) => {
-    const newTodos = todos.filter((todo) => todo.id != toDoItem.id)
+    const newTodos = todos.filter((todo) => todo.id !== toDoItem.id)
     setTodos(newTodos)
 
   }
 
   return (
     <>
-      <Header />
       <Form createNewToDo={createNewToDo} />
       <ToDoList todos={todos} updateToDo={updateToDo} deleteToDo={deleteToDo} />
     </>
