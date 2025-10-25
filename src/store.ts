@@ -1,10 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import todoReducer from './feature/todoList'
+import themeReducer from './feature/themeList'
 import { loadFromLocalStorage, saveToLocalStorage } from './helpers/storage'
 
 
 const rootReducer = combineReducers({
   todoList: todoReducer,
+  themeList: themeReducer
 })
 export type RootState = ReturnType<typeof rootReducer>
 
@@ -13,6 +15,7 @@ export type RootState = ReturnType<typeof rootReducer>
 export const store = configureStore({
   reducer: {
     todoList: todoReducer,
+    themeList: themeReducer,
   },
   preloadedState: loadFromLocalStorage()
 })

@@ -1,6 +1,10 @@
-import { HeaderContainer, HeaderNavLink, HeaderSyled } from './Header.styled'
+import { useDispatch } from 'react-redux'
+import { HeaderContainer, HeaderNavLink, HeaderSyled, HeaderThemeButton, HeaderThemeButtonEl } from './Header.styled'
+import { toggleThemeAction } from '../../feature/themeList'
 
 export const Header = () => {
+
+  const dispatch = useDispatch()
 
   return (
     <HeaderSyled>
@@ -9,9 +13,14 @@ export const Header = () => {
           to={'/'}
           end
         >ToDo</HeaderNavLink>
+
         <HeaderNavLink
           to={'/list'}
         >List</HeaderNavLink>
+
+        <HeaderThemeButton>
+          <HeaderThemeButtonEl onClick={() => { dispatch(toggleThemeAction()) }}>toggle</HeaderThemeButtonEl>
+        </HeaderThemeButton>
 
       </HeaderContainer>
     </HeaderSyled>

@@ -29,3 +29,18 @@ export const HeaderNavLink = styled(NavLink)`
     color: #ffffff33
   }
 `
+export const HeaderThemeButton = styled.div`
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    border: none;
+
+    top: 50%;
+    transform: translateY(-50%);
+  `
+
+export const HeaderThemeButtonEl = styled.button`
+    background: #fff;
+    margin: 0;
+  `
