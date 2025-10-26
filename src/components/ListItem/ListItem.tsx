@@ -6,7 +6,7 @@ export const ListItem = ({ todo }: { todo: ToDo }) => {
       // className={`${classes.link} ${todo.isDone ? classes.done : classes.notDone}`}
 
       target="_blank"
-      to={`/list/${todo.id}`} rel="noreferrer"
+      to={`list/${todo.id}`} rel="noreferrer"
       $isDone={todo.isDone}
     >{todo.text}</ListItemLink>
   )
