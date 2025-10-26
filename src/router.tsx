@@ -11,9 +11,9 @@ export const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <NotFound />,
     children: [
-      { path: '/', element: <ToDoListPage /> },
-      { path: '/list', element: <ViewList /> },
-      { path: '/list/:id', element: <ViewListItem /> }
+      { index: true, element: <ToDoListPage /> },
+      { path: 'list', element: <ViewList /> },
+      { path: 'list/:id', element: <ViewListItem /> }
     ]
   },
   { path: '*', element: <NotFound /> }
